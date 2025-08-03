@@ -5,13 +5,15 @@ import BookModal from "../components/BookModal";
 import AddBookForm from "../components/AddBookForm";
 import { useAuth } from "../context/AuthContext";
 
+const BACKEND_URL = import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
+
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [selected, setSelected] = useState(null);
   const { user } = useAuth();
 
   const fetchBooks = () => {
-    axios.get("http://localhost:5000/api/books")
+    axios.get(`${BACKEND_URL}/api/books`)
       .then((res) => setBooks(res.data))
       .catch((err) => alert("Failed to load books"));
   };
@@ -22,6 +24,7 @@ const Home = () => {
 
   return (
     <div className="p-4 bg-orange-100 min-h-screen">
+      <p className="text-center mb-4 text-xl animate-bounce">Login/Signup to add books</p>
       {user && <AddBookForm onAdded={fetchBooks} />}
       {selected && (
         <BookModal book={selected} onClose={() => setSelected(null)} />

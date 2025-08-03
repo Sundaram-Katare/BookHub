@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const BACKEND_URL = import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
+
 const AddBookForm = ({ onAdded }) => {
   const [form, setForm] = useState({
     title: "",
@@ -12,7 +14,7 @@ const AddBookForm = ({ onAdded }) => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/api/books", form, {
+      await axios.post(`${BACKEND_URL}/api/books`, form, {
         headers: { Authorization: token },
       });
       alert("Book added successfully");
