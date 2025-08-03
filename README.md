@@ -97,7 +97,7 @@ Before jumping in, head over to the [**Issues**](../../issues) section of this r
 ✅ I’ve already created multiple issues that are ready to be picked up.  
 🗨️ If you find an issue you'd like to work on, **comment** on it saying:  
 `I want to work on this issue.`  
-Once assigned, you can start working on it.
+Then, you can start working on it. Once done, You can raise the PR for it.
 
 ✨ You’re also welcome to raise **new issues** if you spot a bug or have an idea for improvement — just make sure to provide enough context!
 
