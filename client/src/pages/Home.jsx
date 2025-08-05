@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="p-4 bg-orange-100 min-h-screen">
-      <p className="text-center mb-4 text-xl animate-bounce">Login/Signup to add books</p>
+      {!user && <p className="text-center mb-4 text-xl animate-bounce">Login/Signup to add books</p>}
       {user && <AddBookForm onAdded={fetchBooks} />}
       {selected && (
         <BookModal book={selected} onClose={() => setSelected(null)} />
