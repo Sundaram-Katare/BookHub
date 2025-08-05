@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import GitHubIcon from "./GithubIcon";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -7,19 +8,45 @@ const Navbar = () => {
 
   return (
     <nav className="bg-orange-300 text-white p-4 flex justify-between">
-      <Link to="/" className="font-extrabold text-blue-800 text-4xl">Book<span className="text-black">Hub</span></Link>
+      <Link to="/" className="font-extrabold text-blue-800 text-4xl">
+        Book<span className="text-black">Hub</span>
+      </Link>
       <div className="space-x-4">
         {user ? (
           <>
-            <span className="text-xl text-black font-semibold">Hi, {user.name}</span>
-            <button onClick={() => { logout(); navigate("/"); alert("Logged out") }} className="bg-black text-white px-4 py-2 rounded">Logout</button>
+            <span className="text-xl text-black font-semibold">
+              Hi, {user.name}
+            </span>
+            <button
+              onClick={() => {
+                logout();
+                navigate("/");
+                alert("Logged out");
+              }}
+              className="bg-black text-white px-4 py-2 rounded"
+            >
+              Logout
+            </button>
           </>
         ) : (
           <>
-            <Link to="/login" className="text-black">Login</Link>
-            <Link to="/signup" className="text-black">Signup</Link>
+            <Link to="/login" className="text-black">
+              Login
+            </Link>
+            <Link to="/signup" className="text-black">
+              Signup
+            </Link>
           </>
         )}
+        <a
+          href="https://github.com/Sundaram-Katare/BookHub"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-10 h-10 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+          title="View on GitHub"
+        >
+          <GitHubIcon className="w-5 h-5" />
+        </a>
       </div>
     </nav>
   );
