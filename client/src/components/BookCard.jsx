@@ -2,7 +2,7 @@ const BookCard = ({ book, onClick }) => (
   <div className="p-4 sm:p-6 md:p-4 lg:p-6">
     <div
       onClick={onClick}
-      className="bg-gradient-to-r from-[#BB6653] to-[#D99A6C] rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer overflow-hidden"
+      className="bg-gradient-to-r from-[#BB6653] to-[#D99A6C] dark:bg-gradient-to-r dark:from-neutral-200 dark:to-neutral-900 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer overflow-hidden"
     >
       <div className="w-full flex justify-center items-center p-4">
         <img
