@@ -1,3 +1,15 @@
+:root {
+  --bg-primary: #ffedd5;
+  --bg-secundary: #ffffff;
+  --primary-text: #000;
+}
+
+.dark {
+  --bg-primary: #262626;
+  --bg-secundary: #333333;
+  --primary-text: #fff;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

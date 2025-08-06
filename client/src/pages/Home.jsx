@@ -26,19 +26,21 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="p-4 bg-orange-100 min-h-screen">
+    <div className="p-4 bg-orange-100 dark:bg-neutral-800 dark:text-white min-h-screen">
       <p className="text-center mb-4 text-xl animate-bounce">
         Login/Signup to add books
       </p>
+
       {user && <AddBookForm onAdded={fetchBooks} />}
       {selected && (
         <BookModal book={selected} onClose={() => setSelected(null)} />
       )}
 
       <div>
-        <h2 className="text-6xl mb-5 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-black to-black text-center mt-6">
+        <h2 className="text-6xl mb-5 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-black to-black text-center mt-6 dark:text-white">
           All Books
         </h2>
+
         <div className="grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {books.map((book) => (
             <BookCard

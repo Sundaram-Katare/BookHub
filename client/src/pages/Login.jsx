@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-orange-100 min-h-screen grid grid-cols-2 justify-center items-center">
+    <div className="bg-orange-100 dark:bg-neutral-800 min-h-screen grid grid-cols-2 justify-center items-center">
     <div className="p-6 max-w-sm mx-auto bg-[#BB6653] min-h-[400px] rounded-lg shadow-lg">
       <form onSubmit={handleLogin} className="space-y-4">
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}
