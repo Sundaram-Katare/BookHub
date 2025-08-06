@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const BACKEND_URL = import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
 
@@ -12,10 +13,10 @@ const Signup = () => {
     e.preventDefault();
     try {
       await axios.post(`${BACKEND_URL}/api/auth/signup`, form);
-      alert("Signup successful! You can now login.");
+      toast.success("Signup successful! You can now login.");
       navigate("/login");
     } catch (err) {
-      alert(err.response?.data?.error || "Signup failed");
+      toast.error(err.response?.data?.error || "Signup failed");
     }
   };
 

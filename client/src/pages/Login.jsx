@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const BACKEND_URL = import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
 
@@ -19,10 +20,10 @@ const Login = () => {
         password,
       });
       login(res.data);
-      alert("Login successful");
+      toast.success("Login successful");
       navigate("/");
     } catch (err) {
-      alert(err.response?.data?.error || "Login failed");
+      toast.error(err.response?.data?.error || "Login failed");
     }
   };
 

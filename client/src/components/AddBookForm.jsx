@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const BACKEND_URL = import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
 
@@ -17,11 +18,11 @@ const AddBookForm = ({ onAdded }) => {
       await axios.post(`${BACKEND_URL}/api/books`, form, {
         headers: { Authorization: token },
       });
-      alert("Book added successfully");
+      toast.success("Book added successfully");
       setForm({ title: "", author: "", coverImage: "" });
       onAdded(); // refresh books
     } catch (err) {
-      alert(err.response?.data?.error || "Error adding book");
+      toast.error(err.response?.data?.error || "Error adding book");
     }
   };
 
