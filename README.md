@@ -156,9 +156,6 @@ Connect on:-
 ---
 
 ## 🫂 Contributors
-
- [![Sundaram Katare](https://github.com/Sundaram-Katare.png?size=100)](https://github.com/Sundaram-Katare)<br>
-[Sundaram Katare](https://github.com/Sundaram-Katare)
-
-[![anmolsah](https://github.com/anmolsah.png?size=100)](https://github.com/anmolsah)<br>
-[anmolsah](https://github.com/anmolsah)
+- [Sundaram Katare](https://github.com/Sundaram-Katare)
+- [anmolsah](https://github.com/anmolsah)
+- [ErickJavier-creator](https://github.com/ErickJavier-creator)
