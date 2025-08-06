@@ -4,13 +4,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
-
+import { useDark } from "./context/DarkMode";
 
 function App() {
-  const storedDarkMode = localStorage.getItem("darkMode") === "true";
-  const [darkMode, setDarkMode] = useState(storedDarkMode);
-
-  const toggleDarkMode = () => setDarkMode(!darkMode)
+  const {darkMode,toggleDarkMode} = useDark()
 
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode);
