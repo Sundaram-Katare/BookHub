@@ -1,16 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import GitHubIcon from "./GithubIcon";
-
+import Logo from "./Logo"
 const Navbar = ({ toggleDarkMode }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   return (
     <nav className="bg-orange-300 dark:bg-neutral-600 p-4 flex justify-between">
-      <Link to="/" className="font-extrabold text-blue-800 dark:text-blue-400 text-4xl">
-        Book<span className="text-black dark:text-white">Hub</span>
-      </Link>
+      <Logo classname={"font-extrabold text-blue-800 text-4xl"}/>
       <div className="space-x-4 text-black dark:text-white">
         {user ? (
           <>
