@@ -83,7 +83,7 @@ const Signup = () => {
                         className={"outline-none "}
                         id={"password"}
                         placeholder={"Enter password"}
-                        {...register("pasword", { required: true })}
+                        {...register("password", { required: true })}
                       />
                       {hidePass ? (
                         <EyeOff
