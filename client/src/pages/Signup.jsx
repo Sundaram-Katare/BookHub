@@ -10,7 +10,7 @@ import Input from "../components/Input";
 import { useDark } from "../context/DarkMode";
 
 const BACKEND_URL =
-  import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
+  import.meta.env.VITE_BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
 
 const Signup = () => {
   const navigate = useNavigate();

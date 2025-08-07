@@ -32,6 +32,12 @@ const Navbar = ({ toggleDarkMode }) => {
         <div className="space-x-4 text-black dark:text-white">
           {user ? (
             <>
+              <Link
+                to="/favorites"
+                className="text-black hover:text-blue-800 font-semibold transition-colors"
+              >
+                Favorites
+              </Link>
               <span className="text-xl text-black font-semibold">
                 Hi, {user.name}
               </span>

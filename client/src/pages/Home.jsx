@@ -6,8 +6,7 @@ import AddBookForm from "../components/AddBookForm";
 import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
-const BACKEND_URL =
-  import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -47,6 +46,7 @@ const Home = () => {
               key={book._id}
               book={book}
               onClick={() => setSelected(book)}
+              onFavoriteChange={fetchBooks}
             />
           ))}
         </div>

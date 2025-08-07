@@ -5,6 +5,7 @@ import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import { useDark } from "./context/DarkMode";
+import Favorites from "./pages/Favorites";
 
 function App() {
   const {darkMode,toggleDarkMode} = useDark()
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </Router>
   );

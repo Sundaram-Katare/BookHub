@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const BACKEND_URL = import.meta.env.BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://bookhub-1-ijt4.onrender.com";
 
 const AddBookForm = ({ onAdded }) => {
   const [form, setForm] = useState({
