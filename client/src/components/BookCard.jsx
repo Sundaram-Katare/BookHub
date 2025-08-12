@@ -49,9 +49,9 @@ const BookCard = ({ book, onClick, showFavoriteButton = true, onFavoriteChange }
         />
       </div>
       <div className="px-4 pb-4 space-y-2" onClick={onClick}>
-        <h2 className="text-xl font-bold text-gray-800 line-clamp-2">{book.title}</h2>
+        <h2 className="text-xl font-bold text-gray-800 line-clamp-2">{book?.title}</h2>
         <p className="text-sm text-black">
-          Added by: <span className="font-medium">{book.addedBy.name}</span>
+          Added by: <span className="font-medium">{book?.addedBy?.name}</span>
         </p>
       </div>
       
