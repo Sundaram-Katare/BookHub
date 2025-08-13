@@ -29,7 +29,7 @@ const Navbar = ({ toggleDarkMode }) => {
 
   return (
     <>
-      <nav className="bg-orange-300 dark:bg-neutral-600 p-4 flex justify-between">
+      <nav className="bg-orange-300 dark:bg-neutral-600 p-4 flex justify-between ">
         <Logo classname={"font-extrabold text-blue-800 text-4xl"} />
         <div className="space-x-4 text-black dark:text-white flex items-center">
           {user ? (
