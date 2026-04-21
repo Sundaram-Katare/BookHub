@@ -5,12 +5,12 @@ import LogoutModal from "./LogoutModal";
 import toast from "react-hot-toast";
 import Logo from "./Logo";
 import { useState } from "react";
-import FavoritesIcon from "./FavoritesIcon";
+
 const Navbar = ({ toggleDarkMode }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [showLogoutModal, setShowLogoutModal] = useState(false);
-
+  const { darkMode } = useDark();
   const handleLogoutClick = () => {
     setShowLogoutModal(true);
   };
@@ -28,9 +28,9 @@ const Navbar = ({ toggleDarkMode }) => {
 
   return (
     <>
-      <nav className="bg-orange-300 dark:bg-neutral-600 p-4 flex justify-between">
+      <nav className="bg-orange-300 dark:bg-neutral-600 p-4 flex justify-between ">
         <Logo classname={"font-extrabold text-blue-800 text-4xl"} />
-        <div className="space-x-4 text-black dark:text-white">
+        <div className="space-x-4 text-black dark:text-white flex items-center">
           {user ? (
             <>
               <Link
@@ -52,8 +52,8 @@ const Navbar = ({ toggleDarkMode }) => {
             </>
           ) : (
             <>
-              <button onClick={toggleDarkMode} className="text-md">
-                Toggle Theme
+              <button onClick={toggleDarkMode} className="text-md ">
+              {darkMode ? <Moon/> : <Sun/>}
               </button>
               <Link to="/login" className="text-black dark:text-white">
                 Login

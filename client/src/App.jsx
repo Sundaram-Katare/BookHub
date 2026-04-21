@@ -3,9 +3,10 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDark } from "./context/DarkMode";
 import Favorites from "./pages/Favorites";
+import Footer from "./components/Footer";
 
 function App() {
   const {darkMode,toggleDarkMode} = useDark()
@@ -32,6 +33,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
