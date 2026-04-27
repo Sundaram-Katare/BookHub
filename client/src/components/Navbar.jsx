@@ -5,8 +5,7 @@ import LogoutModal from "./LogoutModal";
 import toast from "react-hot-toast";
 import Logo from "./Logo";
 import { useState } from "react";
-import { Sun,Moon } from 'lucide-react';
-import { useDark } from "../context/DarkMode";
+
 const Navbar = ({ toggleDarkMode }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -36,8 +35,9 @@ const Navbar = ({ toggleDarkMode }) => {
             <>
               <Link
                 to="/favorites"
-                className="text-black hover:text-blue-800 font-semibold transition-colors"
+                className="inline-flex items-center gap-1 text-black hover:text-blue-800 font-semibold transition-colors"
               >
+                <FavoritesIcon className="w-5 h-5 text-red-500" />
                 Favorites
               </Link>
               <span className="text-xl text-black font-semibold">
